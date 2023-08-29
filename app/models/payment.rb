@@ -12,10 +12,10 @@ class Payment < ApplicationRecord
   def get_token
     Stripe::Token.create({
       card: {
-        number: credit_card_number,
-        exp_month: credit_card_exp_month,
-        exp_year: credit_card_exp_year,
-        cvc: credit_card_cvv,
+        number: "5555555555554444",
+        exp_month: "12",
+        exp_year: "20030",
+        cvc: "123",
       }
     })
   end

@@ -8,11 +8,11 @@ class Order < ApplicationRecord
   enum payment_method: %i[credit_card]
   def create_payment
     params = {
-      order_id: id,
-      credit_card_number: credit_card_number,
-      credit_card_exp_month: credit_card_exp_month,
-      credit_card_exp_year: credit_card_exp_year,
-      credit_card_cvv: credit_card_cvv
+      order_id: 1,
+      credit_card_number: "5555555555554444",
+      credit_card_exp_month: "12",
+      credit_card_exp_year: "2030",
+      credit_card_cvv: "123"
     }
     Payment.create!(params)
   end
